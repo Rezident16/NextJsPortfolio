@@ -7,57 +7,40 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Scenthood E-commerce Website",
+    description:
+      "Scenthood is a full-stack web application that allows users to buy and sell fragrances and inspired by Amazon and Wayfair. The project features functionalities such as Search Bar, Pagination, Filters, and Image Storage via AWS S3.",
+    backend: "Python, Flask, PostgreSQL",
+    frontend: "React, Redux",
+    other: "AWS S3, Google Places Autocomplete API",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Rezident16/Scenthood",
+    previewUrl: "https://scenthood.onrender.com/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "SavoryScoot",
+    description: "SavoryScoot is a full-stack web application developed by 4 developers that allows users to order food from local restaurants and inspired by Uber Eats. The project features functionalities Image Storage via AWS S3, Cart Storage via Local Storage, and displaying restaurant location via Google Maps API.",
+    backend: "Python, Flask, PostgreSQL",
+    frontend: "React, Redux",
+    other: " AWS S3, Google Maps API",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Rezident16/Uber_Project",
+    previewUrl: "https://savoryscoot.onrender.com/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "GatherUp",
+    description: "GatherUp is a full-stack web application inspired by Meetup that allows users to create and join events. The project was developed with Express on the backend and React on the frontend.",
+    backend: "Javascript, Express, Sequelize",
+    frontend: "React, Redux",
+    other: "",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Rezident16/API-project",
+    previewUrl: "https://gatherup.onrender.com/",
   },
 ];
 
@@ -84,7 +67,7 @@ const ProjectsSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      {/* <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -100,7 +83,7 @@ const ProjectsSection = () => {
           name="Mobile"
           isSelected={tag === "Mobile"}
         />
-      </div>
+      </div> */}
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
@@ -114,6 +97,9 @@ const ProjectsSection = () => {
               key={project.id}
               title={project.title}
               description={project.description}
+              backend={project.backend}
+              frontend={project.frontend}
+              other={project.other}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
