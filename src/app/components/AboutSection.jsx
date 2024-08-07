@@ -36,7 +36,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Wayfair - Senior Account Manager</li>
-        <li>Sportsman&apos;s Warehouse - Senior Site Merchandiser</li>
+        <li>Sportsmans Warehouse - Senior Site Merchandiser</li>
         <li>Walmart E-commerce - Account Manager</li>
       </ul>
     ),
