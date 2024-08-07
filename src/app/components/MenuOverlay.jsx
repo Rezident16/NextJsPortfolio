@@ -9,7 +9,7 @@ const MenuOverlay = ({ links, setNavbarOpen }) => {
           <NavLink
             href={"#" + link.path}
             title={link.title}
-            onClick={() => setNavbarOpen(false)}
+            setNavbarOpen={setNavbarOpen}
           />
         </li>
       ))}
