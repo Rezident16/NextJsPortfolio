@@ -5,6 +5,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import EmailIcon from "../../../public/email.svg";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -57,6 +58,11 @@ const EmailSection = () => {
             href="https://www.linkedin.com/in/andreivorobev/"
           >
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          </Link>
+          <Link href="mailto:andrey.vorob1995@gmail.com" target="_blank">
+            <Image src={EmailIcon} alt="Email Icon" 
+            className="ml-2"
+            />
           </Link>
         </div>
       </div>
