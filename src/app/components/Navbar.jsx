@@ -29,10 +29,10 @@ const Navbar = () => {
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <ScrollLink
-          to="home"
+          to="#"
           smooth={true}
           duration={500}
-          className="text-2xl md:text-5xl font-semibold cursor-pointer bg-gradient-to-r from-blue-200 to-blue-500 bg-clip-text text-transparent font-mono"        >
+          className="text-2xl md:text-5xl font-semibold cursor-default bg-gradient-to-r from-blue-200 to-blue-500 bg-clip-text text-transparent font-mono"        >
           AV
           {/* <Image src={Logo} alt="Logo" /> */}
         </ScrollLink>
